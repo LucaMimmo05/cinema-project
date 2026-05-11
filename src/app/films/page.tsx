@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "../../components/ui/Input";
+import Film from "@/src/components/ui/Film";
 
 export default function page() {
     return (
@@ -48,51 +49,11 @@ export default function page() {
                 <Input type="searchbar" placeholder="Cerca un film..." />
 
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
-                        <h2 className="text-xl font-medium text-gray-600 mb-4">
-                            Film
-                        </h2>
-                    </div>
-                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
-                        <h2 className="text-xl font-medium text-gray-600 mb-4">
-                            Film
-                        </h2>
-                    </div>
-                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
-                        <h2 className="text-xl font-medium text-gray-600 mb-4">
-                            Film
-                        </h2>
-                    </div>
-                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
-                        <h2 className="text-xl font-medium text-gray-600 mb-4">
-                            Film
-                        </h2>
-                    </div>
-                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
-                        <h2 className="text-xl font-medium text-gray-600 mb-4">
-                            Film
-                        </h2>
-                    </div>
-                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
-                        <h2 className="text-xl font-medium text-gray-600 mb-4">
-                            Film
-                        </h2>
-                    </div>
-                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
-                        <h2 className="text-xl font-medium text-gray-600 mb-4">
-                            Film
-                        </h2>
-                    </div>
-                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
-                        <h2 className="text-xl font-medium text-gray-600 mb-4">
-                            Film
-                        </h2>
-                    </div>
-                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
-                        <h2 className="text-xl font-medium text-gray-600 mb-4">
-                            Film
-                        </h2>
-                    </div>
+                    <Film title="Film 1" />
+                    <Film title="Film 2" />
+                    <Film title="Film 3" />
+                    <Film title="Film 4" />
+                    <Film title="Film 5" />
                 </div>
             </div>
         </section>
