@@ -5,8 +5,10 @@ import Input from "../../components/ui/Input";
 import { Film as FilmInterface } from "@/src/interfaces/filmInterface";
 import { getAllFilms } from "@/src/services/filmService";
 import Film  from "@/src/components/ui/Film";
+import { useRouter } from "next/navigation";
 
 export default function page() {
+    const {push} = useRouter();
     const [films, setFilms] = useState<FilmInterface[]>([]);
 
     useEffect(() => {
@@ -16,6 +18,10 @@ export default function page() {
     };
     load();
     }, []);
+
+    const handleClick = (id: number) => {
+        push("/view-film/" + id)
+    }
     return (
         <section className="flex h-screen w-full items-start justify-between">
             <div className="flex flex-col items-start justify-start bg-gray-50 border border-(--bento-stroke) p-4 w-80 h-screen">
@@ -64,7 +70,7 @@ export default function page() {
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                     {films.map((film) => {
                         return (
-                            <Film key={film.id} film={film}/>
+                            <Film key={film.id} film={film} onClick={(id) => handleClick(id)}/>
                         )
                     })}
                 </div>
