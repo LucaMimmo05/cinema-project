@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import "tailwindcss";
+
+:root {
+    /* Background colors */
+    --light-bg: #f7f7f7;
+    --bento-bg: #ffffff;
+    --button-bg: #fafafa;
+
+    /* Primary color variants */
+    --primary: #229799;
+    --primary-10: #2297991a;
+    --primary-hover: #1b7878;
+    --primary-active: #1b7878;
+    --primary-text-inactive: #22979980;
+
+    /* Typography */
+    --text: #333333;
+    --subtext: #666666;
+    --placeholder-text: #999999;
+    --button-text: #ffffff;
+
+    /* Borders */
+    --bento-stroke: #e8e8e8;
+
+    /* Shadows */
+    --shadow: #00000010;
+}
+
+body {
+    background: var(--light-bg);
+    color: var(--text);
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
