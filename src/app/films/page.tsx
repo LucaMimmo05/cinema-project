@@ -1,8 +1,21 @@
-import React from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+"use client"
+import { useEffect, useState } from "react";
 import Input from "../../components/ui/Input";
-import Film from "@/src/components/ui/Film";
+import { Film as FilmInterface } from "@/src/interfaces/filmInterface";
+import { getAllFilms } from "@/src/services/filmService";
+import Film  from "@/src/components/ui/Film";
 
 export default function page() {
+    const [films, setFilms] = useState<FilmInterface[]>([]);
+
+    useEffect(() => {
+    const load = async () => {
+        const films = await getAllFilms();
+        setFilms(films);
+    };
+    load();
+    }, []);
     return (
         <section className="flex h-screen w-full items-start justify-between">
             <div className="flex flex-col items-start justify-start bg-gray-50 border border-(--bento-stroke) p-4 w-80 h-screen">
@@ -49,11 +62,11 @@ export default function page() {
                 <Input type="searchbar" placeholder="Cerca un film..." />
 
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                    <Film title="Film 1" />
-                    <Film title="Film 2" />
-                    <Film title="Film 3" />
-                    <Film title="Film 4" />
-                    <Film title="Film 5" />
+                    {films.map((film) => {
+                        return (
+                            <Film key={film.id} film={film}/>
+                        )
+                    })}
                 </div>
             </div>
         </section>

@@ -1,13 +1,13 @@
 import { API_URL } from ".";
 import { Film } from "../interfaces/filmInterface";
        
-    export const getAllFilms = async () : Promise<Film> => {
+    export const getAllFilms = async () : Promise<Film[]> => {
         try {
             const response = await fetch(API_URL + "/films" as string);
             
             const body = await response.json();
 
-            return body as Promise<Film>;
+            return body as Film[];
         }
 
         catch {
@@ -21,7 +21,7 @@ import { Film } from "../interfaces/filmInterface";
 
             const body = await response.json();
 
-            return body as Promise<Film>;
+            return body as Film;
         }
 
         catch {
