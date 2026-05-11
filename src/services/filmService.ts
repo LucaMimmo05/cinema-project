@@ -1,27 +1,30 @@
-        const API_URL = process.env.NEXT_PUBLIC_API_URL;
+import { API_URL } from ".";
+import { Film } from "../interfaces/filmInterface";
        
-    export const getAllFilms = async () => {
+    export const getAllFilms = async () : Promise<Film> => {
         try {
             const response = await fetch(API_URL + "/films" as string);
+            const body = await response.json();
 
-             const body = await response.json();
-            console.log(body);
-             return body;
+            return body as Promise<Film>;
         }
+
         catch {
             throw new Error("Failed to fetch");
         }
     }
 
-    export const getSingleFilm = async (id : number) => {
+    export const getFilmDetails = async (id : number) : Promise<Film> => {
         try {
             const response = await fetch(API_URL + "/films/" + id as string);
+            const body = await response.json();
 
-             const body = await response.json();
-            console.log(body);
-             return body;
+            return body as Promise<Film>;
         }
+
         catch {
             throw new Error("Failed to fetch");
         }
     }
+
+   
