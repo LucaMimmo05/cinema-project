@@ -47,8 +47,52 @@ export default function page() {
             <div className="w-full flex-1 p-10">
                 <Input type="searchbar" placeholder="Cerca un film..." />
 
-                <div className="mt-10 flex flex-col items-start justify-start w-full">
-                    {/* Qui andranno i risultati della ricerca */}
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
+                        <h2 className="text-xl font-medium text-gray-600 mb-4">
+                            Film
+                        </h2>
+                    </div>
+                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
+                        <h2 className="text-xl font-medium text-gray-600 mb-4">
+                            Film
+                        </h2>
+                    </div>
+                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
+                        <h2 className="text-xl font-medium text-gray-600 mb-4">
+                            Film
+                        </h2>
+                    </div>
+                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
+                        <h2 className="text-xl font-medium text-gray-600 mb-4">
+                            Film
+                        </h2>
+                    </div>
+                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
+                        <h2 className="text-xl font-medium text-gray-600 mb-4">
+                            Film
+                        </h2>
+                    </div>
+                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
+                        <h2 className="text-xl font-medium text-gray-600 mb-4">
+                            Film
+                        </h2>
+                    </div>
+                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
+                        <h2 className="text-xl font-medium text-gray-600 mb-4">
+                            Film
+                        </h2>
+                    </div>
+                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
+                        <h2 className="text-xl font-medium text-gray-600 mb-4">
+                            Film
+                        </h2>
+                    </div>
+                    <div className="border border-gray-300 rounded-lg p-4 w-full max-w-60 h-100">
+                        <h2 className="text-xl font-medium text-gray-600 mb-4">
+                            Film
+                        </h2>
+                    </div>
                 </div>
             </div>
         </section>
